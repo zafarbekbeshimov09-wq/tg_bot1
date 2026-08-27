@@ -6,7 +6,8 @@ from aiogram.filters import CommandStart
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiohttp import web
 
-BOT_TOKEN = "8866966342:AAGL6S-AQEzKXznR4SM0UYB_K2XnDVI0Pg0"
+# Telegram @BotFather'dan olgan yangi tokeningizni yozing
+BOT_TOKEN = "8866966342:AAGiFp8oVoyTjruHl_XSGGc6Z1MjGu5Vg_I"
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
@@ -25,11 +26,10 @@ async def start_handler(message: types.Message):
     welcome_text = f"Xush kelibsiz, {message.from_user.full_name}!\n\nQuyidagi bo'limlardan birini tanlang:"
     await message.answer(welcome_text, reply_markup=get_main_keyboard())
 
-# Render o'chib qolmasligi uchun oddiy veb sahifa
 async def handle_ping(request):
     return web.Response(text="Bot ishlayapti!")
 
-async def import_web_app():
+async def start_web_server():
     app = web.Application()
     app.router.add_get("/", handle_ping)
     runner = web.AppRunner(app)
@@ -40,7 +40,7 @@ async def import_web_app():
 
 async def main():
     logging.basicConfig(level=logging.INFO)
-    await import_web_app()
+    await start_web_server()
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
