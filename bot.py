@@ -6,8 +6,8 @@ from aiogram.filters import CommandStart
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiohttp import web
 
-# Telegram @BotFather'dan olgan yangi tokeningizni yozing
-BOT_TOKEN = "8866966342:AAGiFp8oVoyTjruHl_XSGGc6Z1MjGu5Vg_I"
+# Telegram @BotFather'dan olgan tokeningiz
+BOT_TOKEN = "8866966342:AAGL6S-AQEzKXznR4SM0UYB_K2XnDVI0Pg0"
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
@@ -15,9 +15,31 @@ dp = Dispatcher()
 def get_main_keyboard():
     return InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton(text="1. Uzum Bankdan pul ishlash 💳", url="https://b.2u.uz/ref?c=50&a=80gStOUiuc")],
-            [InlineKeyboardButton(text="2. Har soniyada pul ishlash ⚡", url="https://t.me/cointbot_bit_bot?start=ref_1621504_g95")],
-            [InlineKeyboardButton(text="3. MLBB tekin olmos 💎", url="https://diamonds.b4a.app/?uid=bxJb43SD6V")]
+            [
+                InlineKeyboardButton(
+                    text="1. Uzum Bankdan pul ishlash 💳", 
+                    url="https://b.2u.uz/ref?c=50&a=80gStOUiuc"
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text="2. Har soniyada pul ishlash ⚡", 
+                    url="https://t.me/cointbot_bit_bot?start=ref_1621504_g95"
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    text="3. MLBB tekin olmos 💎", 
+                    url="https://diamonds.b4a.app/?uid=bxJb43SD6V"
+                )
+            ],
+            # 🔽 YANGI 4-HAVOLA SHU YERGA QO'SHILDI 🔽
+            [
+                InlineKeyboardButton(
+                    text="4. har soatda 100ming 📢", 
+                    url="https://tronpick.io/?ref=zafarbek_8bd"
+                )
+            ]
         ]
     )
 
