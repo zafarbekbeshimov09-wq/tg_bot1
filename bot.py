@@ -7,7 +7,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiohttp import web
 
 # Telegram @BotFather'dan olgan tokeningiz
-BOT_TOKEN = "8866966342:AAGL6S-AQEzKXznR4SM0UYB_K2XnDVI0Pg0"
+BOT_TOKEN = "8866966342:AAGiFp8oVoyTjruHl_XSGGc6Z1MjGu5Vg_I"
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
